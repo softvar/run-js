@@ -65,6 +65,28 @@ button:hover {
   background-color: #45a049;
 }
 
+.output-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.output {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+  word-break: break-all;
+}
+
+.copy-icon {
+  cursor: pointer;
+  color: #333;
+}
+
+.copy-icon:hover {
+  color: #000;
+}
+
 @media (max-width: 600px) {
   .container {
       width: 90%;

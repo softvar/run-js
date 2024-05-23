@@ -17,18 +17,35 @@ window.onload = function() {
 
   document.getElementById('inputForm1').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevent the default form submission
-    const p = window.runjs.generateDeterministicHash(getInputValue('input1'), getInputValue('input2'));
+    const complexHssh = window.runjs.generateDeterministicHash(getInputValue('input1'), getInputValue('input2'));
 
-    alert(p);
+    document.getElementById('output1').textContent = complexHssh;
+
+    const output1 = document.getElementById('output1');
+    const copyIcon1 = document.getElementById('copyIcon1');
+
+    if (output1.textContent.trim() !== "") {
+        copyIcon1.style.display = 'inline';
+    } else {
+        copyIcon1.style.display = 'none';
+    }
   });
 
   document.getElementById('inputForm2').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevent the default form submission
-    const p = window.runjs.generateDeterministicHash(document.getElementById('input1').value, document.getElementById('input2').value);
+    const complexHash = window.runjs.generateDeterministicHash(document.getElementById('input1').value, document.getElementById('input2').value);
+    const result = getInputValue('input3') + complexHash + getInputValue('input5');
 
-    const result = getInputValue('input3') + (p || getInputValue('input4')) + getInputValue('input5')
+    document.getElementById('output2').textContent = result;
 
-    console.log(result);
+    const output2 = document.getElementById('output2');
+    const copyIcon2 = document.getElementById('copyIcon2');
+
+    if (output2.textContent.trim() !== "") {
+        copyIcon2.style.display = 'inline';
+    } else {
+        copyIcon2.style.display = 'none';
+    }
   });
 };
 
@@ -39,4 +56,15 @@ function togglePassword(inputId) {
     } else {
         input.type = "password";
     }
+}
+
+function copyToClipboard(outputId) {
+    const outputElement = document.getElementById(outputId);
+    const text = outputElement.textContent;
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Text copied to clipboard');
+    }).catch(err => {
+        alert('Error copying text to clipboard: ', JSON.stringify(err));
+    });
 }

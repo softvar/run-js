@@ -11,6 +11,7 @@
         <h1>Run JavaScript</h1>
         <div class="form-container">
             <form id="inputForm1">
+                <h3>Form 1</h3>
                 <div class="input-group">
                     <input type="password" id="input1" name="input1" placeholder="Input 1">
                     <span class="toggle-password" onclick="togglePassword('input1')">&#128065;</span>
@@ -20,21 +21,26 @@
                     <span class="toggle-password" onclick="togglePassword('input2')">&#128065;</span>
                 </div>
                 <button type="submit">Submit</button>
+                <div class="output-group">
+                    <div id="output1" class="output"></div>
+                    <span id="copyIcon1" class="copy-icon" onclick="copyToClipboard('output1')" style="display: none;">&#128203;</span>
+                </div>
             </form>
             <form id="inputForm2">
+                <h3>Form 2</h3>
                 <div class="input-group">
                     <input type="password" id="input3" name="input3" placeholder="Input 3">
                     <span class="toggle-password" onclick="togglePassword('input3')">&#128065;</span>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="input4" name="input4" placeholder="Input 4">
-                    <span class="toggle-password" onclick="togglePassword('input4')">&#128065;</span>
                 </div>
                 <div class="input-group">
                     <input type="password" id="input5" name="input5" placeholder="Input 5">
                     <span class="toggle-password" onclick="togglePassword('input5')">&#128065;</span>
                 </div>
                 <button type="submit">Submit</button>
+                <div class="output-group">
+                    <div id="output2" class="output"></div>
+                    <span id="copyIcon2" class="copy-icon" onclick="copyToClipboard('output2')" style="display: none;">&#128203;</span>
+                </div>
             </form>
         </div>
     </div>
