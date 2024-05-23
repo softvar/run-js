@@ -1,0 +1,29 @@
+{
+  "name": "run-js",
+  "version": "0.1.0",
+  "description": "Run JavaScript scripts",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "rollup": "rollup index.js --file dist/bundle.js --format umd --name 'runjs'",
+    "uglify": "uglifyjs ./dist/bundle.js --compress --mangle --source-map --output ./dist/bundle.min.js",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softvar/run-js.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Varun Malhotra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softvar/run-js/issues"
+  },
+  "homepage": "https://github.com/softvar/run-js#readme"
+}
