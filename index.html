@@ -8,13 +8,35 @@
 </head>
 <body>
     <div class="container">
-        <h1>Responsive Web Page</h1>
-        <form id="inputForm">
-            <input type="text" id="input1" name="input1" placeholder="Input 1">
-            <input type="text" id="input2" name="input2" placeholder="Input 2">
-
-            <button type="submit">Submit</button>
-        </form>
+        <h1>Run JavaScript</h1>
+        <div class="form-container">
+            <form id="inputForm1">
+                <div class="input-group">
+                    <input type="password" id="input1" name="input1" placeholder="Input 1">
+                    <span class="toggle-password" onclick="togglePassword('input1')">&#128065;</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="input2" name="input2" placeholder="Input 2">
+                    <span class="toggle-password" onclick="togglePassword('input2')">&#128065;</span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <form id="inputForm2">
+                <div class="input-group">
+                    <input type="password" id="input3" name="input3" placeholder="Input 3">
+                    <span class="toggle-password" onclick="togglePassword('input3')">&#128065;</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="input4" name="input4" placeholder="Input 4">
+                    <span class="toggle-password" onclick="togglePassword('input4')">&#128065;</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="input5" name="input5" placeholder="Input 5">
+                    <span class="toggle-password" onclick="togglePassword('input5')">&#128065;</span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
     <script src="dist/bundle.js"></script>
     <script src="js/script.js"></script>

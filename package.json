@@ -9,8 +9,6 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "rollup": "rollup index.js --file dist/bundle.js --format umd --name 'runjs'",
-    "uglify": "uglifyjs ./dist/bundle.js --compress --mangle --source-map --output ./dist/bundle.min.js",
     "webpack": "webpack --config webpack.config.js"
   },
   "repository": {

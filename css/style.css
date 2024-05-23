@@ -21,17 +21,34 @@ h1 {
   margin-bottom: 20px;
 }
 
+.form-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-input[type="text"] {
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+input[type="password"], input[type="text"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  flex: 1;
+}
+
+.toggle-password {
+  margin-left: -30px;
+  cursor: pointer;
 }
 
 button {
@@ -53,7 +70,12 @@ button:hover {
       width: 90%;
   }
 
-  input[type="text"] {
+  .form-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  input[type="password"], input[type="text"] {
       font-size: 14px;
   }
 }
